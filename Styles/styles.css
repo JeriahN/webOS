@@ -36,6 +36,10 @@ body {
   top: 0px;
   left: 0px;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #menubar:before {
@@ -71,7 +75,7 @@ body {
 }
 
 #menubar .menubar-button {
-  min-width: 50px;
+  min-width: 45px;
   height: 100%;
   margin: 0px;
   padding: 0px 10px;
@@ -96,13 +100,12 @@ body {
 }
 
 #menubar .menubar-button svg {
-  height: 95%;
+  height: 70%;
   color: var(--text-primary);
 }
 
 #menubar .menubar-button img {
-  width: 95%;
-  height: 95%;
+  height: 70%;
 }
 
 #menubar #menubar-menu-app-button {

@@ -21,14 +21,16 @@
             <a class="menubar-button" id="menubar-menu-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
               >
                 <path
-                  fill-rule="evenodd"
-                  d="M2 6.75A.75.75 0 012.75 6h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 6.75zm0 6.5a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
-                  clip-rule="evenodd"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
                 />
               </svg>
             </a>
@@ -37,7 +39,58 @@
             >
           </div>
         </div>
-        <div class="menubar-side menubar-right"></div>
+        <div class="menubar-side menubar-right">
+          <a class="menubar-button" id="menubarMenubarItems"></a>
+          <a class="menubar-button" id="menubarOSMenubarItems"></a>
+          <a class="menubar-button" id="menubarControlCenter"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
+              />
+            </svg>
+          </a>
+          <a class="menubar-button" id="menubarAssistant"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"
+              />
+            </svg>
+          </a>
+          <a
+            class="menubar-button"
+            id="menubarDateAndTime"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#notificationCenter"
+            aria-controls="notificationCenter"
+            ><span>
+              <span class="date" id="menubarDate"
+                ><noscript>Date Not Available</noscript></span
+              >
+              <span> </span>
+              <span class="time" id="menubarTime"></span
+              ><noscript>Time Not Available</noscript></span
+            ></a
+          >
+        </div>
       </div>
       <div id="taskbar" class="light-shadow">
         <div class="navbar-side taskbar-left"></div>
@@ -63,12 +116,36 @@
         <div class="navbar-side taskbar-right"></div>
       </div>
     </div>
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="notificationCenter"
+      aria-labelledby="notificationCenter"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+          Backdrop with scrolling
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <p>Try scrolling the rest of the page to see this option in action.</p>
+      </div>
+    </div>
     <script src="./Javascript/jQuery/jquery.js"></script>
     <script src="./Javascript/jQuery/jquery-ui.min.js"></script>
     <script src="./Javascript/Bootstrap/popper.min.js"></script>
     <script src="./Javascript/Bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./Javascript/Dexie/dexie.js"></script>
+    <script src="./Javascript/dateAndTime.js"></script>
     <script src="./Javascript/main.js"></script>
+    <script src="./Javascript/fileSystem.js"></script>
     <script></script>
   </body>
 </html>
